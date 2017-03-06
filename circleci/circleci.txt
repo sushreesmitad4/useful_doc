@@ -1,0 +1,130 @@
+ssh-keygen -C dhalsushreesmita4@gmail.com
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ec2-user/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/ec2-user/.ssh/id_rsa.
+Your public key has been saved in /home/ec2-user/.ssh/id_rsa.pub.
+The key fingerprint is:
+fd:b9:e1:f3:3b:37:92:0e:75:42:54:6f:6e:35:62:1d dhalsushreesmita4@gmail.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|             ..E |
+|            . . o|
+|             + o+|
+|         .  o .oo|
+|        S .  o .o|
+|           ...o. |
+|           .+ .  |
+|           .o=...|
+|            ++++.|
++-----------------+
+[ec2-user@ip-172-31-34-254 ~]$ cat /home/ec2-user/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv6oSUg212nIOtD6hn97Qoi0AqtbaFpTAaDtB4sX8z                                     hvjdARVS4f7dkfpyXlywqBOfAE5rBqRd6JIsndedrnQp68fjS0vby6x62Icwc5E55lG4aJo2NKMqj0Ak                                     BsoiX4UgcOCha0OzdxlMZG7T0q9YLW3UzbYSHaiBoo+qBBWrEZAXq7YGMd6xMlV2GOCxA8PjwxfOsAkF                                     +4RY/za8x9YB9RBm9uzw20OWI2KsZ3ZwV2hTPtS3vli3zOfhPukE2PGxP9w2hOZPQ6z0HAbJJ+dJms69                                     ryBMocMI/xha9OIP2Uw4eIIDD770beHKYn2t6HBbcmBOU4Rza3cZixZl5PYZ dhalsushreesmita4@g                                     mail.com
+[ec2-user@ip-172-31-34-254 ~]$ ^C
+[ec2-user@ip-172-31-34-254 ~]$ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv6oSUg212n                                     IOtD6hn97Qoi0AqtbaFpTAaDtB4sX8zhvjdARVS4f7dkfpyXlywqBOfAE5rBqRd6JIsndedrnQp68fjS                                     0vby6x62Icwc5E55lG4aJo2NKMqj0AkBsoiX4UgcOCha0OzdxlMZG7T0q9YLW3UzbYSHaiBoo+qBBWrE                                     ZAXq7YGMd6xMlV2GOCxA8PjwxfOsAkF+4RY/za8x9YB9RBm9uzw20OWI2KsZ3ZwV2hTPtS3vli3zOfhP                                     ukE2PGxP9w2hOZPQ6z0HAbJJ+dJms69ryBMocMI/xha9OIP2Uw4eIIDD770beHKYn2t6HBbcmBOU4Rza                                     3cZixZl5PYZ dhalsushreesmita4@gmail.com
+-bash: ssh-rsa: command not found
+[ec2-user@ip-172-31-34-254 ~]$ ssh git@github.com
+The authenticity of host 'github.com (192.30.253.112)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of know                                     n hosts.
+Enter passphrase for key '/home/ec2-user/.ssh/id_rsa':
+PTY allocation request failed on channel 0
+Hi sushreesmitad! You've successfully authenticated, but GitHub does not provide                                      shell access.
+Connection to github.com closed.
+[ec2-user@ip-172-31-34-254 ~]$ ssh -p 64578 ubuntu@54.186.59.144
+The authenticity of host '[54.186.59.144]:64578 ([54.186.59.144]:64578)' can't b                                     e established.
+ECDSA key fingerprint is 4b:9d:2f:bd:7c:ff:73:dd:fa:9e:8c:55:b1:24:71:61.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '[54.186.59.144]:64578' (ECDSA) to the list of known                                      hosts.
+Permission denied (publickey).
+[ec2-user@ip-172-31-34-254 ~]$  /home/ec2-user/.ssh/id_rsa.pub
+-bash: /home/ec2-user/.ssh/id_rsa.pub: Permission denied
+[ec2-user@ip-172-31-34-254 ~]$ ssh -v git@github.com
+OpenSSH_6.4, OpenSSL 1.0.1e-fips 11 Feb 2013
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 51: Applying options for *
+debug1: Connecting to github.com [192.30.253.112] port 22.
+debug1: Connection established.
+debug1: identity file /home/ec2-user/.ssh/id_rsa type 1
+debug1: identity file /home/ec2-user/.ssh/id_rsa-cert type -1
+debug1: identity file /home/ec2-user/.ssh/id_dsa type -1
+debug1: identity file /home/ec2-user/.ssh/id_dsa-cert type -1
+debug1: identity file /home/ec2-user/.ssh/id_ecdsa type -1
+debug1: identity file /home/ec2-user/.ssh/id_ecdsa-cert type -1
+debug1: Enabling compatibility mode for protocol 2.0
+debug1: Local version string SSH-2.0-OpenSSH_6.4
+debug1: Remote protocol version 2.0, remote software version libssh-0.7.0
+debug1: no match: libssh-0.7.0
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: server->client aes128-ctr hmac-sha1 none
+debug1: kex: client->server aes128-ctr hmac-sha1 none
+debug1: sending SSH2_MSG_KEX_ECDH_INIT
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Server host key: RSA 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48
+debug1: Host 'github.com' is known and matches the RSA host key.
+debug1: Found key in /home/ec2-user/.ssh/known_hosts:1
+debug1: ssh_rsa_verify: signature correct
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: Roaming not allowed by server
+debug1: SSH2_MSG_SERVICE_REQUEST sent
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering RSA public key: /home/ec2-user/.ssh/id_rsa
+debug1: Server accepts key: pkalg ssh-rsa blen 279
+debug1: key_parse_private_pem: PEM_read_PrivateKey failed
+debug1: read PEM private key done: type <unknown>
+Enter passphrase for key '/home/ec2-user/.ssh/id_rsa':
+debug1: read PEM private key done: type RSA
+debug1: Authentication succeeded (publickey).
+Authenticated to github.com ([192.30.253.112]:22).
+debug1: channel 0: new [client-session]
+debug1: Entering interactive session.
+debug1: Sending environment.
+debug1: Sending env LANG = en_US.UTF-8
+PTY allocation request failed on channel 0
+Hi sushreesmitad! You've successfully authenticated, but GitHub does not provide shell access.
+debug1: client_input_channel_req: channel 0 rtype exit-status reply 0
+debug1: channel 0: free: client-session, nchannels 1
+Connection to github.com closed.
+Transferred: sent 3496, received 1816 bytes, in 0.1 seconds
+Bytes per second: sent 23895.1, received 12412.3
+debug1: Exit status 1
+[ec2-user@ip-172-31-34-254 ~]$ ssh -i /home/ec2-user/.ssh/id_rsa_github -p 64638 ubuntu@54.90.38.72
+Warning: Identity file /home/ec2-user/.ssh/id_rsa_github not accessible: No such file or directory.
+The authenticity of host '[54.90.38.72]:64638 ([54.90.38.72]:64638)' can't be established.
+ECDSA key fingerprint is 4b:9d:2f:bd:7c:ff:73:dd:fa:9e:8c:55:b1:24:71:61.
+Are you sure you want to continue connecting (yes/no)? no
+Host key verification failed.
+[ec2-user@ip-172-31-34-254 ~]$ ssh -i /home/ec2-user/.ssh/id_rsa  -p 64638 ubuntu@54.90.38.72
+The authenticity of host '[54.90.38.72]:64638 ([54.90.38.72]:64638)' can't be established.
+ECDSA key fingerprint is 4b:9d:2f:bd:7c:ff:73:dd:fa:9e:8c:55:b1:24:71:61.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '[54.90.38.72]:64638' (ECDSA) to the list of known hosts.
+Enter passphrase for key '/home/ec2-user/.ssh/id_rsa':
+Last login: Thu Aug  4 11:16:36 2016 from 10.143.25.87
+ubuntu@box853:~$ -p 64638 ubuntu@54.90.38.72
+-bash: -p: command not found
+ubuntu@box853:~$ -p 64638 ubuntu@54.90.38.72
+-bash: -p: command not found
+ubuntu@box853:~$
+ubuntu@box853:~$ Last login: Thu Aug  4 11:16:36 2016 from 10.143.25.87
+-bash: Last: command not found
+ubuntu@box853:~$ ls
+aptkey.tmp      bin                            openssl.patch             setuptools-3.4.4.zip  versions.json
+aptkey.tmp.~1~  cassandra.logdir_IS_UNDEFINED  php                       target
+aptkey.tmp.md5  fb-adb-1.2.0.tar.gz            pkg-versions.sh           TEST
+aptkey.tmp.new  nvm                            postgis-2.1.0.tar.gz.md5  tmp
+ubuntu@box853:~$ cd tmp
+ubuntu@box853:~/tmp$ ls
+ubuntu@box853:~/tmp$ cd ..
+ubuntu@box853:~$ cd target
+ubuntu@box853:~/target$ ls
+ubuntu@box853:~/target$ d /
+-bash: d: command not found
+ubuntu@box853:~/target$ cd /
